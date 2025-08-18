@@ -1,0 +1,8 @@
+{
+    "name": "rosc-and-bart-bots",
+    "version": "0.0.1",
+    "title": "Rosc and Bart Bots",
+    "author": "Spencer",
+    "factorio_version": "2.0",
+    "dependencies": ["base >= 2.0"]
+}
