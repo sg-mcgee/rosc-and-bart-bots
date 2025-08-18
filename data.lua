@@ -12,7 +12,8 @@ local sprite_idle = {
     height = 84,
     frame_count = 1,
     direction_count = 1,
-    line_length = 1
+    line_length = 1,
+    scale = 0.5
 }
 
 local sprite_motion = {
@@ -21,7 +22,8 @@ local sprite_motion = {
     height = 84,
     frame_count = 1,
     direction_count = 1,
-    line_length = 1
+    line_length = 1,
+    scale = 0.5
 }
 
 local sprite_idle_with_cargo = {
@@ -30,7 +32,8 @@ local sprite_idle_with_cargo = {
     height = 84,
     frame_count = 1,
     direction_count = 1,
-    line_length = 1
+    line_length = 1,
+    scale = 0.5
 }
 
 local sprite_motion_with_cargo = {
@@ -39,7 +42,8 @@ local sprite_motion_with_cargo = {
     height = 84,
     frame_count = 1,
     direction_count = 1,
-    line_length = 1
+    line_length = 1,
+    scale = 0.5
 }
 
 data.raw["logistic-robot"]["logistic-robot"].idle = sprite_idle
