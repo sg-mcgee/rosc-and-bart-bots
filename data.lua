@@ -5,18 +5,47 @@ local sprite_with_cargo_filename = "__rosc-and-bart-bots__/graphics/entity/logis
 local sprite_travel_filename = "__rosc-and-bart-bots__/graphics/entity/logistic-robot/roscoe_loaf_transparent_resized.png"
 local sprite_remnant_filename = "__rosc-and-bart-bots__/graphics/entity/logistic-robot/remnants/roscoe_tired_transparent_resized.png"
 
---Get filenames of sprites
-data.raw["logistic-robot"]["logistic-robot"].idle.filename = sprite_idle_filename
-data.raw["logistic-robot"]["logistic-robot"].idle_with_cargo.filename = sprite_with_cargo_filename
-data.raw["logistic-robot"]["logistic-robot"].in_motion.filename = sprite_travel_filename
-data.raw["logistic-robot"]["logistic-robot"].in_motion_with_cargo.filename = sprite_with_cargo_filename
+--Define logistic sprite animations
+local sprite_idle = {
+    filename = sprite_idle_filename,
+    width = 80,
+    height = 84,
+    frame_count = 1,
+    direction_count = 1,
+    line_length = 1
+}
 
---Set animations to only one frame 
-data.raw["logistic-robot"]["logistic-robot"].idle.frame_count = 1
-data.raw["logistic-robot"]["logistic-robot"].idle.direction_count = 1
-data.raw["logistic-robot"]["logistic-robot"].in_motion.frame_count = 1
-data.raw["logistic-robot"]["logistic-robot"].in_motion_with_cargo.frame_count = 1
+local sprite_motion = {
+    filename = sprite_travel_filename,
+    width = 80,
+    height = 84,
+    frame_count = 1,
+    direction_count = 1,
+    line_length = 1
+}
 
+local sprite_idle_with_cargo = {
+    filename = sprite_with_cargo_filename,
+    width = 80,
+    height = 84,
+    frame_count = 1,
+    direction_count = 1,
+    line_length = 1
+}
+
+local sprite_motion_with_cargo = {
+    filename = sprite_with_cargo_filename,
+    width = 80,
+    height = 84,
+    frame_count = 1,
+    direction_count = 1,
+    line_length = 1
+}
+
+data.raw["logistic-robot"]["logistic-robot"].idle = sprite_idle
+data.raw["logistic-robot"]["logistic-robot"].in_motion = sprite_motion
+data.raw["logistic-robot"]["logistic-robot"].idle_with_cargo = sprite_idle_with_cargo
+data.raw["logistic-robot"]["logistic-robot"].in_motion_with_cargo = sprite_motion_with_cargo
 
 --Define new remnant
 local roscoe_remnant = table.deepcopy(data.raw["corpse"]["logistic-robot-remnants"])
@@ -27,7 +56,7 @@ roscoe_remnant.animation = {
     width = 80,
     height = 84,
     frame_count = 1,
-    discretion_count = 1,
+    direction_count = 1,
     shift = {0,0}
 }
 
