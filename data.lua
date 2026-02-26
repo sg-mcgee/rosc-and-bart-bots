@@ -21,8 +21,8 @@ local sprite_motion = {
     width = 80,
     height = 84,
     frame_count = 1,
-    direction_count = 8,
-    line_length = 8,
+    direction_count = 16,
+    line_length = 16,
     scale = 0.5
 }
 
